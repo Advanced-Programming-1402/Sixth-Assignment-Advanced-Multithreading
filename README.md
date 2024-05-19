@@ -1,4 +1,7 @@
-## Pi Number :![Uploading OIG1.3ZKw.jfif…]()
+
+
+
+## Pi Number :
 
       Pi (often represented by the lower-case Greek letter π), one of the most well-known mathematical constants, is the ratio of a circle’s circumference to its diameter.  For any circle, the distance around the edge is a little more than three times the distance across.
 Typing π into a calculator and pressing ENTER will yield the result 3.141592654, not because this value is exact, but because a calculator’s display is often limited to 10 digits.  Pi is actually an irrational number (a decimal with no end and no repeating pattern) that is most often approximated with the decimal 3.14 or the fraction 227.
