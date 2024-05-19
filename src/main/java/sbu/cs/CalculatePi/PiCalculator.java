@@ -1,27 +1,73 @@
 package sbu.cs.CalculatePi;
+import java.math.BigDecimal;
+import java.math.MathContext;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class PiCalculator {
 
-    /**
-     * Calculate pi and represent it as a BigDecimal object with the given floating point number (digits after . )
-     * There are several algorithms designed for calculating pi, it's up to you to decide which one to implement.
-     Experiment with different algorithms to find accurate results.
+    static BigDecimal pi = new BigDecimal("0");
+    public static class piCalculator implements Runnable {
+        MathContext mc = new MathContext(1000000);
+        int n;
 
-     * You must design a multithreaded program to calculate pi. Creating a thread pool is recommended.
-     * Create as many classes and threads as you need.
-     * Your code must pass all of the test cases provided in the test folder.
+        public piCalculator( int n) {
+            this.n = n;
 
-     * @param floatingPoint the exact number of digits after the floating point
-     * @return pi in string format (the string representation of the BigDecimal object)
-     */
+        }
 
-    public String calculate(int floatingPoint)
-    {
-        // TODO
-        return null;
+        @Override
+        public void run() {
+            BigDecimal one = new BigDecimal("1");
+            BigDecimal save ;
+            BigDecimal save1 = new BigDecimal("1");
+            BigDecimal three = new BigDecimal("3");
+            BigDecimal four = new BigDecimal("4");
+
+            three = three.divide(new BigDecimal(2 * n + 1), mc);
+            four = one.divide(four , mc);
+            four = four.pow(n);
+            save = four.multiply(three , mc);
+
+            for (int j = 1; j <= n; j++) {
+                BigDecimal two = new BigDecimal((2 * j - 1));
+                two = two.divide(new BigDecimal(2 * j),mc);
+                save1 = save1.multiply(two , mc);
+            }
+            save = save.multiply(save1,mc);
+            addToSum(save);
+
+        }
     }
 
-    public static void main(String[] args) {
-        // Use the main function to test the code yourself
+    public static synchronized void addToSum(BigDecimal value){
+        pi = pi.add(value);
     }
-}
+    public static String calculate(int floatingPoint){
+        ExecutorService threadPool = Executors.newFixedThreadPool(8);
+        BigDecimal x = new BigDecimal("3");
+        for ( int i =1 ; i< 1000000 ; i++){
+            piCalculator task = new piCalculator(i);
+            threadPool.execute(task);
+        }
+        threadPool.shutdown();
+        try {
+            threadPool.awaitTermination(10000000,TimeUnit.MILLISECONDS);
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+        pi = pi.add(x);
+        return pi.toString().substring(0, floatingPoint + 2);
+
+    }
+
+
+        public static void main(String[] args) {
+            // Use the main function to test the code yourself
+            System.out.println(calculate(2));
+
+        }
+    }
+
+
