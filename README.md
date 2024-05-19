@@ -153,5 +153,14 @@ At this code I used multithreading (ThreadPool) & I also used BigDecimal
    BigDecimal provides methods for various arithmetic operations like addition, subtraction, multiplication, division, and power.
 
 ## Known Issues:
+I had two main problems with this code :
+1. What is MathContext & how to use it ?
+2. What is the number of timeout in awaitTermination (because the code return wrong answer) ?
+
+  For the first problem I use copilot and search on the internet.
+  I checked sites like geeksforgeeks &stackoverflow.
+
+   For the second problem I just increased its value (This gave threads more time to calculate and let them finished their job)
+
 
 
