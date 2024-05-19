@@ -1,9 +1,13 @@
-## Pi Number :
+
+![pipipi](https://github.com/mahdi1ebi/Sixth-Assignment-Advanced-Multithreading/assets/160699586/040c0ddf-dae5-49ac-b93f-71c853f4c370)
+
+
+##  Pi Number :
 
       Pi (often represented by the lower-case Greek letter π), one of the most well-known mathematical constants, is the ratio of a circle’s circumference to its diameter.  For any circle, the distance around the edge is a little more than three times the distance across.
 Typing π into a calculator and pressing ENTER will yield the result 3.141592654, not because this value is exact, but because a calculator’s display is often limited to 10 digits.  Pi is actually an irrational number (a decimal with no end and no repeating pattern) that is most often approximated with the decimal 3.14 or the fraction 227.
 
-The definition of π is:
+## The definition of π is:
  
  The Circumference  divided by the Diameter of a Circle.          
 
@@ -13,7 +17,7 @@ The number pi (π) is a mathematical constant that represents the ratio of a cir
 
 Pi has been studied for thousands of years and has applications in various fields such as mathematics, physics, engineering, and computer science. It is also a fundamental constant in trigonometry and calculus.
 
-## Name :
+## 📝Name :
    The symbol used by mathematicians to represent the ratio of a circle's circumference to its diameter is the lowercase Greek letter π, sometimes spelled out as pi. In English, π is pronounced as "pie" (/paɪ/ PY).In mathematical use, the lowercase letter π is distinguished from its capitalized and enlarged counterpart Π, which denotes a product of a sequence, analogous to how Σ denotes summation.
 
 The choice of the symbol π is discussed in the section Adoption of the symbol π.
@@ -27,7 +31,7 @@ The choice of the symbol π is discussed in the section Adoption of the symbol �
    Pi occurs in many areas of mathematics, far too many to list here.
 
 
-## Methods for calculating pi :
+## 🧠Methods for calculating pi :
 
 #There are several algorithms for calculating the value of Pi (π), each with its own unique approach and characteristics. Here are some of the main differences:
   
@@ -38,7 +42,7 @@ The choice of the symbol π is discussed in the section Adoption of the symbol �
    The Gauss-Legendre algorithm is a method to compute the digits of π. It is based on the individual work of Carl Friedrich Gauss and Adrien-Marie Legendre, 
    combined with modern algorithms for multiplication and square roots. The algorithm repeatedly replaces two numbers by their arithmetic and geometric mean, in        order to approximate their arithmetic-geometric mean. It is notable for being rapidly convergent, with only 25 iterations producing 45 million correct              digits of π. However, it is computer memory-intensive. Successive iterations of the algorithm produce better approximations of the circle constant, π.
 
-### The difference :dart: : 
+### :dart: The difference : 
 This algorithm is known for its rapid convergence, meaning it can quickly provide a very accurate approximation of Pi.
    
 
@@ -56,7 +60,7 @@ This algorithm is known for its rapid convergence, meaning it can quickly provid
 
 The pattern of the series involves the multiplication of three consecutive numbers in the denominator and alternating addition and subtraction2. This series continues indefinitely, providing increasingly accurate approximations of π2.
 
-### The difference 🏎️ : 
+### 🏎️The difference  : 
 This series converges faster than Leibniz’s formula, which means it can provide a more accurate approximation of Pi with fewer terms.
 
    
@@ -72,14 +76,14 @@ This series converges faster than Leibniz’s formula, which means it can provid
 
           π=4∑k≥0(−1)k12k+1
 
- ### The difference 🍉: 
+ ### 🍉The difference : 
  This is a simple and elegant formula, but it converges very slowly. That means you need a lot of terms to get a precise value of Pi.
 
 #### Learn more : https://en.wikipedia.org/wiki/Leibniz_formula_for_%CF%80
 
 
 
-## My choice for the program :
+## ✨My choice for the program :
 
 You can find lots of formulas for calculating π, but my favorite is this one:
 
@@ -90,7 +94,7 @@ For some reason, it doesn't make most lists of π formulas, but I like it becaus
 It only uses addition, multiplication, and division. No square roots. It computes π directly (not 1/π). And even though there are complicated formulas that converge faster, this simple one still converges at about 0.6 decimal digits per term.
 
 
-## Why I preferred this algorithm :
+## 👤Why I preferred this algorithm :
 
 1. Easier to implement this algorithm as a code than other algorithms.
 2. Good accuracy.
@@ -112,10 +116,11 @@ Different algorithms also use different mathematical approaches.The choice of al
 According to these points, this algorithm was the best algorithm that I found that performed well in these three properties.
 
 
-##  Code explanation:
+## 🤖 Code explanation:
+
 At this code I used multithreading (ThreadPool) & I also used BigDecimal
 
-## ThreadPool:
+### 🧶 ThreadPool:
 
 
    #### Thread Creation: 
@@ -136,7 +141,7 @@ At this code I used multithreading (ThreadPool) & I also used BigDecimal
    When the ThreadPool is no longer needed, it can be shut down, which stops all worker threads after they’ve finished executing their current tasks.
 
 
-## BigDecimal:
+### 🏰 BigDecimal:
 
 
    #### Arbitrary Precision: 
@@ -152,7 +157,7 @@ At this code I used multithreading (ThreadPool) & I also used BigDecimal
    #### Arithmetic Operations: 
    BigDecimal provides methods for various arithmetic operations like addition, subtraction, multiplication, division, and power.
 
-## Known Issues:
+## ✖️Known Issues:
 I had two main problems with this code :
 1. What is MathContext & how to use it ?
 2. What is the number of timeout in awaitTermination (because the code return wrong answer) ?
