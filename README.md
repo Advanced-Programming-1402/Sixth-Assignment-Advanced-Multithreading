@@ -1,62 +1,58 @@
-# Advanced Multithreading
+## Pi Number :![Uploading OIG1.3ZKw.jfif…]()
 
+      Pi (often represented by the lower-case Greek letter π), one of the most well-known mathematical constants, is the ratio of a circle’s circumference to its diameter.  For any circle, the distance around the edge is a little more than three times the distance across.
+Typing π into a calculator and pressing ENTER will yield the result 3.141592654, not because this value is exact, but because a calculator’s display is often limited to 10 digits.  Pi is actually an irrational number (a decimal with no end and no repeating pattern) that is most often approximated with the decimal 3.14 or the fraction 227.
 
-## Introduction
-In this assignment, you are given three problems focused on various areas of multithreaded programming. Solve each exercise according to the provided guidelines.
+The definition of π is:
+ 
+ The Circumference  divided by the Diameter of a Circle.          
 
+ ![pi](https://github.com/mahdi1ebi/Sixth-Assignment-Advanced-Multithreading/assets/160699586/d447f87e-6053-4f92-a99b-f78c7c5b00d6)
 
-## Objectives
-- Review the concepts of multithreaded programming and utilize them correctly
-- Research Pi calculation algorithms
-- Familiarize yourself with the Semaphore, CountDownLatch, and BigDecimal classes
-- Learn the basics of writing a proper project report
+The number pi (π) is a mathematical constant that represents the ratio of a circle's circumference to its diameter. It is approximately equal to 3.14159 and is an irrational number, meaning it cannot be expressed as a fraction and its decimal representation goes on infinitely without repeating.
 
+Pi has been studied for thousands of years and has applications in various fields such as mathematics, physics, engineering, and computer science. It is also a fundamental constant in trigonometry and calculus.
 
-## Tasks
-1. Fork this repository and clone the fork to your local machine. Ensure to create a new Git branch before starting your work
-2. Complete the following exercises based on the instructions provided:
+## Name :
+   The symbol used by mathematicians to represent the ratio of a circle's circumference to its diameter is the lowercase Greek letter π, sometimes spelled out as pi. In English, π is pronounced as "pie" (/paɪ/ PY).In mathematical use, the lowercase letter π is distinguished from its capitalized and enlarged counterpart Π, which denotes a product of a sequence, analogous to how Σ denotes summation.
 
-   - `Calculate Pi`: Calculate the value of Pi up to 1000 digits after the floating point. Find 
-     more instructions in the `PiCalculator` class.
-   - `Semaphore`: Solve a synchronization problem using a Semaphore that allows 2 threads to enter the critical section.  Find more instructions in the `Controller` class.
-3. Write a comprehensive report on the assignment.
+The choice of the symbol π is discussed in the section Adoption of the symbol π.
 
-
-## Notes
-- You can find unit tests for the `Calculate Pi` exercise. Use these to ensure you've implemented the code correctly.
-- You are NOT allowed to use any other synchronization tool for the `Semaphore` exercise. Only Semaphores may be used.
-
-
-## Report
-You are expected to write a detailed report on the assignment. This is the most important task 
-expected of you, and over 50% of the assignment's final grade depends on it. Explain the 
-solutions you chose for each exercise but try to focus on the `Calculate Pi` problem.
-<br>You MUST include the following details in your report:
-- The solutions you chose for each exercise and how you implemented them
-- All mathematical algorithms you tried and used for the `Calculate Pi` problem
-- Details on the final algorithm you chose for calculating Pi and its advantages over other algorithms
-- Explanation regarding Semaphore and its use cases
-- All References and Resources (include links where possible)
-
-Your report can either be in the format of a PDF or Markdown file (Markdown is preferred). 
-Including graphs, charts, and other appropriate visuals can grant bonus points.
+## Defenition :
+   π is commonly defined as the ratio of a circle's circumference C to its diameter d:
 
 
 
-## Evaluation
-- Your code should compile and run without any errors
-- Your code should be well-organized, readable, properly commented and should follow clean code principles
-- Your code should pass all the provided unit tests
-- You should use Git for version control and include meaningful commit messages
-- Your report should be as comprehensive as possible
+## Where does pi occur? :
+   Pi occurs in many areas of mathematics, far too many to list here.
+
+## Methods for calculating pi :
+   #1- Gauss Legendre Algorithm :
+            
+   The Gauss-Legendre algorithm is a method to compute the digits of π. It is based on the individual work of Carl Friedrich Gauss and Adrien-Marie Legendre, 
+   combined with modern algorithms for multiplication and square roots. The algorithm repeatedly replaces two numbers by their arithmetic and geometric mean, in        order to approximate their arithmetic-geometric mean. It is notable for being rapidly convergent, with only 25 iterations producing 45 million correct              digits of π. However, it is computer memory-intensive. Successive iterations of the algorithm produce better approximations of the circle constant, π.
+
+Learn more : https://en.wikipedia.org/wiki/Gauss%E2%80%93Legendre_algorithm
 
 
-## Submission
-1. Add your mentor as a contributor to the project.
-2. Create a `develop` branch for implementing features.
-3. Use Git for regular code commits.
-4. Push your code and your report to the remote repository.
-5. Submit a pull request to merge the `develop` branch with `main`.
+
+   #2- Nilakantha Series : 
+
+   The Nilakantha series is a method for calculating the value of π, named after the Indian mathematician Nilakantha who lived from 1444 to 15441. It is an infinite series that converges towards π1. The series is given by:
+
+      π = 3 + 4 / (2*3*4) – 4 / (4*5*6) + 4 / (6*7*8) – . . .
+
+The pattern of the series involves the multiplication of three consecutive numbers in the denominator and alternating addition and subtraction2. This series continues indefinitely, providing increasingly accurate approximations of π2.
+   
+Learn more : https://www.geeksforgeeks.org/calculate-pi-using-nilkanthas-series/
 
 
-The deadline for submitting your code is Friday, May 17 (28th of Ordibehesht). Good luck!
+   #3- Leibniz Formula : 
+
+   The Leibniz formula for π, named after Gottfried Wilhelm Leibniz, is a method for calculating the value of π using an alternating series1. It was first discovered by the Indian mathematician Madhava of Sangamagrama in the 14th or 15th century. The formula is given by:
+
+          π=4∑k≥0(−1)k12k+1
+ 
+Learn more : https://en.wikipedia.org/wiki/Leibniz_formula_for_%CF%80
+
+## Approximate value and digits :
