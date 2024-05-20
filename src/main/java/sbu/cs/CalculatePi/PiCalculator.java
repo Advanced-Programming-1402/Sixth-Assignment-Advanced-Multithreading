@@ -64,9 +64,15 @@ public class PiCalculator {
         pi = pi.setScale(floatingPoint , RoundingMode.DOWN);
         return pi.toString();
     }
+    public static BigDecimal pi = new BigDecimal(0);
+    public static synchronized void addResult(BigDecimal term){
+        pi = pi.add(term);
+    }
 
     public static void main(String[] args) {
-        // Use the main function to test the code yourself
+        PiCalculator piCalculator = new PiCalculator();
+        String s = piCalculator.calculate(2);
+        System.out.println(s);
     }
 
 
