@@ -1,19 +1,44 @@
 package sbu.cs.CalculatePi;
 
+import java.math.BigDecimal;
+import java.math.MathContext;
+
 public class PiCalculator {
+    static class PiCalculatorTask implements Runnable {
+        private int finalI;
+        public static BigDecimal pi;
+        MathContext mc = new MathContext(1000);
 
-    /**
-     * Calculate pi and represent it as a BigDecimal object with the given floating point number (digits after . )
-     * There are several algorithms designed for calculating pi, it's up to you to decide which one to implement.
-     Experiment with different algorithms to find accurate results.
+        public PiCalculatorTask(int finalI) {
+            this.finalI = finalI;
+        }
+        @Override
+        public void run() {
+            BigDecimal Consequent1 = new BigDecimal(8*finalI + 1);
+            BigDecimal Consequent2 = new BigDecimal(8*finalI + 4);
+            BigDecimal Consequent3 = new BigDecimal(8*finalI + 5);
+            BigDecimal Consequent4 = new BigDecimal(8*finalI + 6);
+            BigDecimal Consequent5 = new BigDecimal(16).pow(finalI);
 
-     * You must design a multithreaded program to calculate pi. Creating a thread pool is recommended.
-     * Create as many classes and threads as you need.
-     * Your code must pass all of the test cases provided in the test folder.
+            BigDecimal numerator1 = new BigDecimal(-1);
+            BigDecimal numerator2 = new BigDecimal(-1);
+            BigDecimal numerator3 = new BigDecimal(-2);
+            BigDecimal numerator4 = new BigDecimal(4);
 
-     * @param floatingPoint the exact number of digits after the floating point
-     * @return pi in string format (the string representation of the BigDecimal object)
-     */
+            numerator1 = numerator1.divide(Consequent3 , mc);
+            numerator2 = numerator2.divide(Consequent4 , mc);
+            numerator3 = numerator3.divide(Consequent2 , mc);
+            numerator4 = numerator4.divide(Consequent1 , mc);
+
+            BigDecimal term = ((numerator4.add(numerator3)).add(numerator1)).add(numerator2);
+            term = term.divide(Consequent5);
+            addResult(term);
+
+//            synchronized (pi){
+//                pi = pi.add(term);
+//            }
+        }
+    }
 
     public String calculate(int floatingPoint)
     {
@@ -24,4 +49,6 @@ public class PiCalculator {
     public static void main(String[] args) {
         // Use the main function to test the code yourself
     }
-}
+
+
+    }
