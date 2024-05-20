@@ -2,6 +2,10 @@ package sbu.cs.CalculatePi;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
+import java.math.RoundingMode;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class PiCalculator {
     static class PiCalculatorTask implements Runnable {
@@ -42,8 +46,23 @@ public class PiCalculator {
 
     public String calculate(int floatingPoint)
     {
-        // TODO
-        return null;
+        ExecutorService executor = Executors.newFixedThreadPool(10);
+
+        for (int i = 0; i < 1000; i++) {
+            PiCalculatorTask task = new PiCalculatorTask(i);
+            executor.execute(task);
+        }
+
+        executor.shutdown();
+        try{
+            executor.awaitTermination(Long.MAX_VALUE , TimeUnit.MILLISECONDS);
+
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        pi = pi.setScale(floatingPoint , RoundingMode.DOWN);
+        return pi.toString();
     }
 
     public static void main(String[] args) {
