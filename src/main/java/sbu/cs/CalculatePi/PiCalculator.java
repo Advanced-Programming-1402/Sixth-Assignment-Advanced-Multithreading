@@ -14,10 +14,12 @@ public class PiCalculator {
         MathContext mc = new MathContext(1000);
 
         public PiCalculatorTask(int finalI) {
+            //کانستراکتور
             this.finalI = finalI;
         }
         @Override
         public void run() {
+            //مقدار دهی اولیه
             BigDecimal Consequent1 = new BigDecimal(8*finalI + 1);
             BigDecimal Consequent2 = new BigDecimal(8*finalI + 4);
             BigDecimal Consequent3 = new BigDecimal(8*finalI + 5);
@@ -46,6 +48,7 @@ public class PiCalculator {
 
     public String calculate(int floatingPoint)
     {
+        //ایجاد تردپول
         ExecutorService executor = Executors.newFixedThreadPool(10);
 
         for (int i = 0; i < 1000; i++) {
@@ -66,10 +69,12 @@ public class PiCalculator {
     }
     public static BigDecimal pi = new BigDecimal(0);
     public static synchronized void addResult(BigDecimal term){
+        //محاسبه نهایی عدد پی
         pi = pi.add(term);
     }
 
     public static void main(String[] args) {
+        //امتحان کردن کد
         PiCalculator piCalculator = new PiCalculator();
         String s = piCalculator.calculate(2);
         System.out.println(s);
