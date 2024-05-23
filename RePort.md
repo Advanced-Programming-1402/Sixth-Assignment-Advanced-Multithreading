@@ -38,4 +38,4 @@ the constructor we told the Semaphore we only have 2 permits so when
 wait until an acquired one release it.
 Using Semaphore was pretty easy and I think this is a
 positive point about it, because making things complicated
-is just bad and on the other hand simplicity is great.
+is just bad and on the other hand simplicity is great..
