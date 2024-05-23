@@ -15,7 +15,7 @@ public class Controller {
      * You are allowed to add new code to any of the three provided classes.
      * Do NOT change any existing lines of code. You can add new attributes and method parameters.
 
-     * Note that every time a thread accesses the resource, you must print its Name and the System Time.
+     * Note that every time a  thread accesses the resource, you must print its Name and the System Time.
      */
 
     public static void main(String[] args) {

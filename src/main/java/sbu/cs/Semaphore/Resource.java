@@ -8,7 +8,7 @@ public class Resource {
     public static void accessResource(Thread t) {
 
         try {
-            // First, get a permit.
+            // First, get a permit
             System.out.println(t.getName() + " is waiting for a permit. (" + LocalTime.now() + ")");
 
             // acquiring the lock
