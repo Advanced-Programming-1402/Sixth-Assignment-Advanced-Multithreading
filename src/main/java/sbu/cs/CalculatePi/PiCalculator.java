@@ -66,3 +66,4 @@ public class PiCalculator {
         System.out.println(p.calculate(7));
     }
 }
+
